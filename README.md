@@ -13,7 +13,7 @@ work.
 To use:
 
     mapper = Gellan.mapper # get the default mapper
-    mapper.zoom = 13 # set the zoom level
+    mapper.zoom = 13 # set the zoom level, can be left nil
     mapper.add(lat, lng, :color => 'blue', :label => 'Junkyard')
     # render a static map 300pxx300px
     mapper.render(:static, 300, 300)
