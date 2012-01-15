@@ -4,16 +4,6 @@ class Gellan
       self.markers << Gellan::GoogleMarker.new(marker)
     end
 
-    def render(map_type = :static, width = 377, height = 377)
-      case(map_type)
-      when :static
-        render_static(width, height)
-      when :dynamic
-      else
-        raise "Unknown map type #{map_type}"
-      end
-    end
-
     def render_static(width, height)
       validate!
 

@@ -27,5 +27,16 @@ class Gellan
     def render(map_type = :static)
       raise "No implemented"
     end
+
+    def render(map_type = :static, width = 377, height = 377)
+      case(map_type)
+      when :static
+        render_static(width, height)
+      when :interactive
+        render_interactive(width, height)
+      else
+        raise "Unknown map type #{map_type}"
+      end
+    end
   end
 end
