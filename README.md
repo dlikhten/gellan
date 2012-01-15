@@ -5,6 +5,15 @@ maps. I hope to also get dynamic map rendering here as well, the idea is
 not to make fully-interactive maps but a simple way to render maps with
 markers.
 
+The eventual goal of this project is to have one api for rendering
+simple static and dynamic maps, and eventually even directions + maps.
+
+# Out-of-scope
+
+I am intentionally not including geocoding into this project. There are
+already many great geocoders in ruby, like geokit/geokid-rails which
+handle cross-geocoder apis and geocoder fail-overs.
+
 # Usage
 
 Just include this gem. This is not specific to rails. It should just
