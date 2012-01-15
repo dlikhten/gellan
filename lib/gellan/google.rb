@@ -8,7 +8,7 @@ class Gellan
       validate!
 
       result = "http://maps.googleapis.com/maps/api/staticmap?"
-      result += "&zoom=#{zoom}"
+      result += "&zoom=#{zoom}" unless zoom.nil?
       result += "&size=#{width}x#{height}"
       result += "&sensor=false"
       result += markers.map{|m| marker_to_static(m)}.join("")
@@ -28,7 +28,6 @@ class Gellan
 
     def validate!
       raise "Must render with at least one marker" if markers.empty?
-      raise "Zoom must be set" if zoom.nil?
     end
   end
 
